@@ -1,10 +1,23 @@
-Name: production error tooling 
+
+# Status Report Tool
+
+This tool reads a list of servers from `servers.txt`, then queries each server's
+`/status` endpoint. It calculates success rates by `(Application, Version)` and
+outputs two types of reports:
+
+1. Human-readable text in the console
+2. JSON file for downstream consumption (`report.json` by default)
+
+Name: Status Page Query Tool
 Description: This tool reads a list of servers (from a file) and queries each server’s http://<server>/status endpoint. It then aggregates success rates for each (Application, Version) pair and writes two reports:
 
 Human-Readable: Printed to stdout.
 Machine-Parseable JSON: Written to report.json (or a file specified by the OUTPUT_FILE environment variable).
 
-Requirements
+
+
+##  Installation Requirements
+
 Python 3.8+
 aiohttp for asynchronous HTTP. Install via pip install aiohttp.
 (Optional) pytest or unittest to run the test suite.
@@ -14,7 +27,7 @@ cd <repo-directory>
 pip install -r requirements.txt  # if you create one
 
 
-Usage
+## Usage
 1. Ensure servers.txt is in the same directory (or specify its path).
 2. Run: python3 main.py servers.txt
 3. Optionally set environment variables:
@@ -29,7 +42,7 @@ export OUTPUT_FILE="my_report.json"
 
 python3 main.py servers.txt
 
-Output
+## Output
 Console: Human-readable success rate summary.
 my_report.json (or report.json): JSON array with per (application, version) aggregated data, plus naive HATEOAS links.
 Running Tests
