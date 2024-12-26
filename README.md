@@ -22,9 +22,9 @@ aiohttp for asynchronous HTTP. Install via `pip install aiohttp`.
 (Optional) `pytest` or `unittest` to run the test suite.
 
 ```shell
-`git clone <this-repo-url>`
-`cd <repo-directory>`
-`pip install -r requirements.txt`  # if you create one
+git clone <this-repo-url>
+cd <repo-directory>
+pip install -r requirements.txt  # if you create one
 ```
 
 ## Usage
