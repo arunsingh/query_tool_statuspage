@@ -1,0 +1,8 @@
+# requirements.txt
+
+# Minimum Python version: 3.8 or higher recommended
+# Required library for asynchronous HTTP requests:
+aiohttp>=3.8
+
+# (Optional) If you want to run tests with pytest instead of unittest, uncomment:
+# pytest>=7.0
